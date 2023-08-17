@@ -1,0 +1,83 @@
+/* .profile{
+    padding: 50px;
+}
+.name{
+    padding: 10px;
+    
+}
+.yourId{
+    padding: 10px;
+    
+}
+.linkedInRef{
+    padding: 10px;
+    font-size: 20px;
+}
+.afterChange{
+    padding: 10px;
+    font-size: 20px;
+} */
+.main {
+    background-color: #6e3eff;
+    height: 100vh;
+    font-size: 25px;
+    color: #000;
+    font-family: "Roboto Mono";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    gap: 5vh;
+}
+.profile-container {
+    border-radius: 20px;
+    background-color: #ede9f8;
+
+    display: flex;
+}
+.profile-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5vh;
+}
+.profile-data-details{
+    display: flex;
+    flex-direction: column;
+
+    gap: 2vh;
+}
+label{
+    display: inline-block;
+    width: 210px;
+}
+input{
+    background-color: #dfd7f6;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: "Roboto Mono";
+    font-size: 15px;
+
+}
+.save-profile{    
+    display: flex;
+    justify-content: center;
+}
+.save-profile-button {
+    width: 200px;
+    background-color: #dfd7f6;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    font-family: "Roboto Mono";
+}
+.profile-image-preview {
+    background-color: #dfd7f6;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+}

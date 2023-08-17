@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+}
+.nav-item{
+    width: 100%;
+    text-align: center;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+.active{
+    border-bottom: 2px dotted black;
+}
+.disabled{
+    pointer-events: none; /* Disable click events */
+    opacity: 0.3;
+}

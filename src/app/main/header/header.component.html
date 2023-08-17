@@ -1,0 +1,15 @@
+<div class="navbar">
+    <div class="nav-item">
+        <a routerLink="home" routerLinkActive="active" [class.disabled]="!isAuthenticated">Home</a>
+    </div>
+    <div class="nav-item">
+        <a routerLink="profile" routerLinkActive="active" [class.disabled]="!isAuthenticated">Profile</a>
+    </div>
+    <div class="nav-item">
+        <a routerLink="recommendation" routerLinkActive="active" [class.disabled]="!isAuthenticated">Recommendation</a>
+    </div>
+    <div class="nav-item">
+        <a routerLink="auth" routerLinkActive="active" (click)="AuthMode()">{{ isAuthenticated ? "LogOut" :
+            "Login"}}</a>
+    </div>
+</div>

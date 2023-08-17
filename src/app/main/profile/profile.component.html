@@ -1,0 +1,60 @@
+<!-- <div class="name">
+    Hi {{ name }}
+</div>
+<form [formGroup]="profileForm" (click)="Submit()">
+    <div>
+        <label>Date Of Birth : </label>
+        <input type="date" formControlName="age">
+    </div>
+    <div>
+        <label>Community : </label>
+        <input type="text" formControlName="caste">
+    </div>
+    <div>
+        <label>City : </label>
+        <input type="text" formControlName="location">
+    </div>
+    <div>
+        <label>Profile Images : </label>
+        <input type="file" formControlName="profileImages" multiple>
+    </div>
+    <button type="button">Submit</button>
+</form> -->
+
+<form [formGroup]="profileForm" (click)="Submit()">
+    <div class="main">
+        <div class="profile-container">
+            <div class="profile-data">
+                <div class="profile-data-details">
+                    <div class="name">
+                        Hi, {{name}}
+                    </div>
+                    <div class="community">
+                        <label class="community-label">Community</label>
+                        <input class="community-input" type="text" formControlName="community">
+                    </div>
+                    <div class="city">
+                        <label class="city-label">City</label>
+                        <input class="city-input" type="text" formControlName="city">
+                    </div>
+                    <div class="dob">
+                        <label class="dob-label">Date Of Birth</label>
+                        <input class="dob-input" type="date" formControlName="dob">
+                    </div>
+                    <div class="profile-image">
+                        <label class="profile-image-label">Profile Image</label>
+                        <input class="profile-image-input" type="file" formControlName="profileImage">
+                    </div>
+                </div>
+                <div>
+                    <div class="save-profile">
+                        <button type="button" class="save-profile-button">Save Profile</button>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-image-preview">
+                <img src="">
+            </div>
+        </div>
+    </div>
+</form>
