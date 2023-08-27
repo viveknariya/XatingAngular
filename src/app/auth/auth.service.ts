@@ -10,6 +10,9 @@ export class AuthService {
 export class User{
   firstName!: string;
   lastName!: string;
+  dob!:string;
   gmail!: string;
-  profId!:string;
+  community!:string;
+  city!: string;
+  profileImage!:string;
 }

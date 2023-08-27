@@ -1,0 +1,20 @@
+<div class="profile-img-info">
+    <div class="profile-img-title-action">
+        <label>Profile Image</label>
+        <div>
+            <i (click)="saveProfileImage()" class="fa fa-save"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+    <div>
+        <hr>
+    </div>
+    <div class="profile-img">
+        <img [src]="previewImageUrl" width="300px">
+    </div>
+    <div class="profile-input">
+        <form [formGroup]="profileImgForm">
+            <input type="file" formControlName="profileImg" (change)="onFileSelected($event)">
+        </form>
+    </div>
+</div>

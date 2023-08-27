@@ -1,60 +1,83 @@
-<!-- <div class="name">
-    Hi {{ name }}
-</div>
-<form [formGroup]="profileForm" (click)="Submit()">
-    <div>
-        <label>Date Of Birth : </label>
-        <input type="date" formControlName="age">
-    </div>
-    <div>
-        <label>Community : </label>
-        <input type="text" formControlName="caste">
-    </div>
-    <div>
-        <label>City : </label>
-        <input type="text" formControlName="location">
-    </div>
-    <div>
-        <label>Profile Images : </label>
-        <input type="file" formControlName="profileImages" multiple>
-    </div>
-    <button type="button">Submit</button>
-</form> -->
-
-<form [formGroup]="profileForm" (click)="Submit()">
-    <div class="main">
-        <div class="profile-container">
-            <div class="profile-data">
-                <div class="profile-data-details">
-                    <div class="name">
-                        Hi, {{name}}
-                    </div>
-                    <div class="community">
-                        <label class="community-label">Community</label>
-                        <input class="community-input" type="text" formControlName="community">
-                    </div>
-                    <div class="city">
-                        <label class="city-label">City</label>
-                        <input class="city-input" type="text" formControlName="city">
-                    </div>
-                    <div class="dob">
-                        <label class="dob-label">Date Of Birth</label>
-                        <input class="dob-input" type="date" formControlName="dob">
-                    </div>
-                    <div class="profile-image">
-                        <label class="profile-image-label">Profile Image</label>
-                        <input class="profile-image-input" type="file" formControlName="profileImage">
-                    </div>
-                </div>
-                <div>
-                    <div class="save-profile">
-                        <button type="button" class="save-profile-button">Save Profile</button>
-                    </div>
-                </div>
+<div class="profile-container">
+    <div class="profile-info">
+        <div class="profile-img-info">
+            <div class="profile-img-title-action">
+                <label>Profile Image</label>
+                <a routerLink="img/edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
             </div>
-            <div class="profile-image-preview">
-                <img src="">
+            <div>
+                <hr>
+            </div>
+            <div class="profile-img">
+                <img src="assets/Emma_D'Arcy.jpg" width="300px">
+            </div>
+        </div>
+        <div class="profile-basic-info">
+            <div class="profile-basic-info-title-action">
+                <label>Your Basic Info</label>
+                <a routerLink="basic/edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-name">
+                <label class="key">Name</label>
+                <label class="value">{{ user?.firstName }}</label>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-dob">
+                <label class="key">Date Of Birth</label>
+                <label class="value">{{ user?.dob }}</label>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-gender">
+                <label class="key">Gender</label>
+                <label class="value">?</label>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-community">
+                <label class="key">Community</label>
+                <label class="value">{{ user?.community }}</label>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-city">
+                <label class="key">City</label>
+                <label class="value">{{ user?.city }}</label>
+            </div>
+        </div>
+        <div class="profile-account-info">
+            <div class="profile-account-info-title-action">
+                <label>Account Info</label>
+                <a routerLink="basic/edit">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-email">
+                <label class="key">Email</label>
+                <label class="value">{{ user?.gmail }}</label>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="profile-password">
+                <label class="key">Password</label>
+                <label class="value">?</label>
             </div>
         </div>
     </div>
-</form>
+</div>

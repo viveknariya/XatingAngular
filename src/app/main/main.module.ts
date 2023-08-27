@@ -8,6 +8,8 @@ import { RecommendationComponent } from './recommendation/recommendation.compone
 import { MainComponent } from './main.component';
 import { RouterModule } from '@angular/router';
 import { MainRoutingModule } from './main-routing.module';
+import { ProfileImgEditComponent } from './profile/profile-img-edit/profile-img-edit.component';
+import { ProfileBasicInfoEditComponent } from './profile/profile-basic-info-edit/profile-basic-info-edit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MainRoutingModule } from './main-routing.module';
     HeaderComponent,
     HomeComponent,
     ProfileComponent,
-    RecommendationComponent
+    RecommendationComponent,
+    ProfileImgEditComponent,
+    ProfileBasicInfoEditComponent
   ],
   imports: [
     CommonModule,

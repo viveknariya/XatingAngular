@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CredentialResponse } from 'google-one-tap';
 import { AuthService, User } from './auth.service';
 import { Router } from '@angular/router';
+import { ResponseData } from '../model';
 
 @Component({
   selector: 'app-auth',
@@ -33,9 +34,16 @@ export class AuthComponent implements OnInit {
     console.log(response);
     const header = new HttpHeaders().set('Content-type','application/json');
     this.http.post("https://localhost:7273/api/Auth/LoginWithGoogle",JSON.stringify(response.credential),{headers:header,responseType:"json"}).subscribe({
-        next : (nxt) => {           
-          this.auth.user.next(<User>nxt);
-          this.router.navigate(['/home']);
+        next : (nxt) => {          
+          console.log((<ResponseData<string>>nxt).stringCode);
+          const sC = (<ResponseData<string>>nxt).stringCode;
+          if(sC === "USER_NOT_EXISTS"){
+            this.router.navigate(['/signup']);
+            return;
+          }
+          // this.auth.user.next(<User>nxt);
+          // this.router.navigate(['/main']);
+          // localStorage.setItem('user',JSON.stringify(<User>nxt));
         },
         error : (err) => {
           this.auth.user.next(null);

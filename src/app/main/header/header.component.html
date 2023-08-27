@@ -1,4 +1,16 @@
-<div class="navbar">
+<div class="side-nav">
+    <div class="xating">
+        <div class="logo-text">Xating</div>
+    </div>
+    <div>
+        <hr>
+    </div>
+    <div class="profile">
+        <div>Vivek</div>
+        <div>
+            <i (click)="LogOut()" class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
     <div class="nav-item">
         <a routerLink="home" routerLinkActive="active" [class.disabled]="!isAuthenticated">Home</a>
     </div>
@@ -7,9 +19,5 @@
     </div>
     <div class="nav-item">
         <a routerLink="recommendation" routerLinkActive="active" [class.disabled]="!isAuthenticated">Recommendation</a>
-    </div>
-    <div class="nav-item">
-        <a routerLink="auth" routerLinkActive="active" (click)="AuthMode()">{{ isAuthenticated ? "LogOut" :
-            "Login"}}</a>
     </div>
 </div>

@@ -1,37 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService, User } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent{
 
-  profileForm!: FormGroup;
-  name:string = "?";
-  yourId:string ="?";
+  user:User|null = new User();
 
-  constructor(private auth:AuthService){}
-
-  ngOnInit(): void {
-    this.auth.user.subscribe({
+  constructor(private authService:AuthService){
+    this.authService.user.subscribe({
       next : (nxt) => {
-        this.name = nxt!.firstName;
-        this.yourId = nxt!.profId;
+       this.user = nxt;
       }
     })
-
-    this.profileForm = new FormGroup({
-      dob: new FormControl(),
-      community: new FormControl(),
-      city: new FormControl(),
-      profileImage: new FormControl()
-    });
-  }
-
-  Submit(){
-    
   }
 }

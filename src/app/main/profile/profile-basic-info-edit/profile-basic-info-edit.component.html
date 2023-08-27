@@ -1,0 +1,44 @@
+<form [formGroup]="BasicInfoForm">
+    <div class="profile-basic-info">
+        <div class="profile-basic-info-title">
+            <label>Your Basic Info</label>
+        </div>
+        <div class="profile-name">
+            <label class="key">Name</label>
+            <label class="value">{{ user?.firstName }}</label>
+        </div>
+        <div class="profile-dob">
+            <label class="key">Date Of Birth</label>
+            <input type="date" formControlName="dob">
+        </div>
+
+        <div class="profile-gender">
+            <label class="key">Gender</label>
+            <select formControlName="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="profile-community">
+            <label class="key">Community</label>
+            <select formControlName="community">
+                <option value="patel">Patel</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="profile-city">
+            <label class="key">City</label>
+            <select formControlName="city">
+                <option value="surat">Surat</option>
+                <option value="vadodara">vadodara</option>
+                <option value="ahmedabad">Ahmedabad</option>
+            </select>
+        </div>
+        <div class="profile-basic-info-action">
+            <button class="profile-basic-info-action-save" (click)="saveProfileBasicInfo()">Save</button>
+            <button class="profile-basic-info-action-cancel">Cancel</button>
+        </div>
+    </div>
+</form>

@@ -1,83 +1,88 @@
-/* .profile{
-    padding: 50px;
-}
-.name{
-    padding: 10px;
-    
-}
-.yourId{
-    padding: 10px;
-    
-}
-.linkedInRef{
-    padding: 10px;
-    font-size: 20px;
-}
-.afterChange{
-    padding: 10px;
-    font-size: 20px;
-} */
-.main {
-    background-color: #6e3eff;
+.profile-container{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    font-size: 25px;
-    color: #000;
-    font-family: "Roboto Mono";
-
+    overflow-y: auto;
+}
+.profile-info{
+    padding: 20px;
+}
+.profile-header{
+    padding: 20px;
+}
+.profile-img-info{
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    gap: 5vh;
-}
-.profile-container {
+
+    background-color: #F5F5F5;
     border-radius: 20px;
-    background-color: #ede9f8;
-
-    display: flex;
+    padding: 20px;
 }
-.profile-data{
+
+.profile-img-title-action{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 5vh;
+    font-weight: 600;
 }
-.profile-data-details{
-    display: flex;
-    flex-direction: column;
-
-    gap: 2vh;
-}
-label{
-    display: inline-block;
-    width: 210px;
-}
-input{
-    background-color: #dfd7f6;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-
-    font-family: "Roboto Mono";
-    font-size: 15px;
-
-}
-.save-profile{    
-    display: flex;
-    justify-content: center;
-}
-.save-profile-button {
-    width: 200px;
-    background-color: #dfd7f6;
-
-    padding: 10px;
-    border-radius: 10px;
-
-    font-family: "Roboto Mono";
-}
-.profile-image-preview {
-    background-color: #dfd7f6;
+.profile-img img{
     border-radius: 20px;
-    width: 300px;
-    height: 400px;
 }
+
+.profile-basic-info-title-action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.profile-basic-info{
+    margin: 10px 0px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.profile-account-info-title-action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.profile-account-info{
+    margin: 10px 0px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/*  */
+hr {
+    height: 1px;
+    background-color: #eaeaea;;
+    border: none;
+}
+.key{
+    display: inline-block;
+    width: 200px;
+
+    color: #717171;
+}
+.value{
+    color: #717171;
+}
+
+i{
+    font-size: 25px;
+    cursor: pointer;
+}
+i:hover{
+    color: #6E3EFF;
+}
+a { 
+    color: inherit; 
+} 
