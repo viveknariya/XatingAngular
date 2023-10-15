@@ -6,13 +6,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
   user = new BehaviorSubject<User | null>(null);
+  userGmail!: string;
 }
 export class User{
   firstName!: string;
   lastName!: string;
-  dob!:string;
+  dob!:Date;
   gmail!: string;
   community!:string;
   city!: string;
-  profileImage!:string;
+  profileImage!:Uint8Array;
 }

@@ -1,10 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
-    height: 100%;
-    margin: 0;
+  width: 100vw;
+  height: 100vh;
   }
 /* styles.scss */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 /* styles.scss */
 body {
   font-family: 'Roboto Mono', monospace;
+}
+.bottom-nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 10vh;
+}
+.nav-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 2vh;
+  background-color: red;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+input {
+  width: 80vw;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+select {
+  width: 100%;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.signupform {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.signup-first-last-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.signup-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.signup-action {
+  width: 100vw;
+  position: fixed;
+  bottom: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-action button {
+  border: none;
+  padding: 3vh 40vw;
+  border-radius: 2vh;
+  cursor: pointer;
+}
+.signup-gender{
+  width: 100%;
+}
+
+.loginform {
+  width: 100vw;
+  position: fixed;
+  bottom: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.xating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+
+.profile-container {
+  padding: 2vh;
+}
+
+.profile-info-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info-navbar-back {
+  padding: 2vh 2.5vh;
+  background-color: greenyellow;
+  border-radius: 50%;
+}
+
+.profile-info-navbar-preview {
+  padding: 2vh;
+  background-color: greenyellow;
+  border-radius: 5vh;
+}
+
+.profile-info-edit {
+  color: yellowgreen;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.profile-basic-info-title-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: mintcream;
+  border-radius: 1vh;
+  padding: 2vh 2vh;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.profile-account-info-title-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: mintcream;
+  border-radius: 1vh;
+  padding: 2vh 2vh;
+
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.profile-img-info {
+  background-color: mintcream;
+  border-radius: 1vh;
+}
+
+.profile-img-src {
+  border-radius: 2vh;
+}
+
+.profile-basic-info-title-action-label {
+  display: flex;
+  flex-direction: rwo;
+  gap: 2vh;
+}
+
+.profile-account-info-title-action-label {
+  display: flex;
+  flex-direction: rwo;
+  gap: 2vh;
 }

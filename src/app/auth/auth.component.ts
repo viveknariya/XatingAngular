@@ -3,12 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { CredentialResponse } from 'google-one-tap';
 import { AuthService, User } from './auth.service';
 import { Router } from '@angular/router';
-import { ResponseData } from '../model';
+import { ResponseData, Xater } from '../model';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  templateUrl: './auth.component.html'
 })
 export class AuthComponent implements OnInit {
 
@@ -39,6 +38,26 @@ export class AuthComponent implements OnInit {
           const sC = (<ResponseData<string>>nxt).stringCode;
           if(sC === "USER_NOT_EXISTS"){
             this.router.navigate(['/signup']);
+            return;
+          }
+          if(sC === "USER_HALF_EXISTS"){
+            this.auth.userGmail = (<ResponseData<string>>nxt).data;
+            this.router.navigate(['/signup']);
+            return;
+          }
+          if(sC === "USER_EXISTS"){
+            const xater = (<ResponseData<Xater>>nxt).data;
+            let user = new User(); 
+            user.firstName = xater.FirstName;
+            user.lastName= xater.LastName;
+            user.dob= xater.Dob;
+            user.gmail= xater.Gmail;
+            user.community= xater.Community;
+            user.city= xater.City;
+            user.profileImage= xater.ProfileImage;
+
+            this.auth.user.next(user);
+            this.router.navigate(['/main']);
             return;
           }
           // this.auth.user.next(<User>nxt);

@@ -5,8 +5,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  templateUrl: './signup.component.html'
 })
 export class SignupComponent {
   user:User|null = new User();
@@ -22,7 +21,7 @@ export class SignupComponent {
     this.SignUpForm =  new FormGroup({
       firstName : new FormControl(),
       lastName : new FormControl(),
-      community : new FormControl("patel"),
+      Dob : new FormControl(),
       gender : new FormControl("male"),
       password : new FormControl(),
       confirmPassword : new FormControl()
@@ -31,12 +30,12 @@ export class SignupComponent {
 
   signUp(){
     const payload = {
+      'Gmail':this.authService.userGmail,
       'firstName' : this.SignUpForm.get('firstName')?.value,
       'lastName' : this.SignUpForm.get('lastName')?.value,
-      'community' : this.SignUpForm.get('community')?.value,
+      'Dob' : this.SignUpForm.get('Dob')?.value,
       'gender' : this.SignUpForm.get('gender')?.value,
-      'password' : this.SignUpForm.get('password')?.value,
-      'confirmPassword' : this.SignUpForm.get('confirmPassword')?.value
+      'password' : this.SignUpForm.get('password')?.value
     }
     this.http.post("https://localhost:7273/api/Auth/SaveBasicInfo", payload).subscribe({
       next:(nxt) => {
