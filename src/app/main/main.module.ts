@@ -8,8 +8,8 @@ import { RecommendationComponent } from './recommendation/recommendation.compone
 import { MainComponent } from './main.component';
 import { RouterModule } from '@angular/router';
 import { MainRoutingModule } from './main-routing.module';
-import { ProfileImgEditComponent } from './profile/profile-img-edit/profile-img-edit.component';
-import { ProfileBasicInfoEditComponent } from './profile/profile-basic-info-edit/profile-basic-info-edit.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
+import { AboutComponent } from './profile/edit-profile/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { ProfileBasicInfoEditComponent } from './profile/profile-basic-info-edit
     HomeComponent,
     ProfileComponent,
     RecommendationComponent,
-    ProfileImgEditComponent,
-    ProfileBasicInfoEditComponent
+    EditProfileComponent,
+    AboutComponent
   ],
   imports: [
     CommonModule,

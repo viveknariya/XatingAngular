@@ -4,8 +4,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { RecommendationComponent } from './recommendation/recommendation.component';
 import { MainComponent } from './main.component';
-import { ProfileImgEditComponent } from './profile/profile-img-edit/profile-img-edit.component';
-import { ProfileBasicInfoEditComponent } from './profile/profile-basic-info-edit/profile-basic-info-edit.component';
+import { AboutComponent } from './profile/edit-profile/about/about.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {
@@ -15,9 +15,10 @@ const routes: Routes = [
       {path:"",component:HomeComponent},
       {path:"home",component:HomeComponent},
       {path:"profile",component:ProfileComponent},
-      {path:"profile/img/edit",component:ProfileImgEditComponent},
-      {path:"profile/basic/edit",component:ProfileBasicInfoEditComponent},
-      {path:"recommendation",component:RecommendationComponent}
+      {path:"recommendation",component:RecommendationComponent},
+      {path:"editprofile",component:EditProfileComponent},
+      {path:"editprofile/about",component:AboutComponent},
+
     ]
   }
 ];

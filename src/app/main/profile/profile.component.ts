@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
 import { AuthService, User } from 'src/app/auth/auth.service';
 
 @Component({
