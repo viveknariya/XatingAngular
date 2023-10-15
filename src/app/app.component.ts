@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit{
 
   constructor(private authService:AuthService,private router:Router){
+    
     const user = localStorage.getItem('user');
     if(!user){
-      this.router.navigate(['auth']);
+      this.router.navigate(['main']);
       return;
     }
     if(user != null){

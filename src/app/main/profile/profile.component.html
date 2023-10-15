@@ -1,133 +1,28 @@
-<div class="profile-container">
-    <div class="profile-info">
-        <div class="profile-info-navbar">
-            <div class="profile-info-navbar-back">
-                <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            <div class="profile-info-navbar-preview">
-                Preview
-            </div>
-        </div>
-        <div class="profile-info-edit">
-            <div>
+<section class="main-page">
+	<div class="main-profile">
+		<div class="preview-img">
+			<img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar">
+		</div>
+		<div class="profile-preview">
+			<label for="">vivek</label>
+			<div class="profile-percentage">
+				<input type="range" value="50" min="0" max="100">
+				<p>42% Profile Complete</p>
+			</div>
+		</div>
+	</div>
 
-                <h1>Edit</h1>
-            </div>
-        </div>
-        <div class="profile-img-info">
-            <div class="profile-img">
-                <img class="profile-img-src"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Emma_D%27Arcy.jpg/330px-Emma_D%27Arcy.jpg"
-                    width="100%">
-            </div>
-        </div>
-        <div class="profile-basic-info">
-            <a class="profile-basic-info-title-action" routerLink="basic/edit">
-                <div class="profile-basic-info-title-action-label">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <label>Your Basic Info</label>
-                </div>
-                <div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </a>
-        </div>
-        <div class="profile-account-info">
-            <div class="profile-account-info-title-action">
-                <div class="profile-account-info-title-action-label">
-                    <i class="fa-solid fa-user"></i>
-                    <label>Account Info</label>
-                </div>
-                <div>
-                    <a routerLink="basic/edit">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- <div class="profile-container">
-    <div class="profile-info">
-        <div class="profile-img-info">
-            <div class="profile-img-title-action">
-                <label>Profile Image</label>
-                <a routerLink="img/edit">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </a>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-img">
-                <img src="assets/Emma_D'Arcy.jpg" width="300px">
-            </div>
-        </div>
-        <div class="profile-basic-info">
-            <div class="profile-basic-info-title-action">
-                <label>Your Basic Info</label>
-                <a routerLink="basic/edit">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </a>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-name">
-                <label class="key">Name</label>
-                <label class="value">{{ user?.firstName }}</label>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-dob">
-                <label class="key">Date Of Birth</label>
-                <label class="value">{{ user?.dob }}</label>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-gender">
-                <label class="key">Gender</label>
-                <label class="value">?</label>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-community">
-                <label class="key">Community</label>
-                <label class="value">{{ user?.community }}</label>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-city">
-                <label class="key">City</label>
-                <label class="value">{{ user?.city }}</label>
-            </div>
-        </div>
-        <div class="profile-account-info">
-            <div class="profile-account-info-title-action">
-                <label>Account Info</label>
-                <a routerLink="basic/edit">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                </a>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-email">
-                <label class="key">Email</label>
-                <label class="value">{{ user?.gmail }}</label>
-            </div>
-            <div>
-                <hr>
-            </div>
-            <div class="profile-password">
-                <label class="key">Password</label>
-                <label class="value">?</label>
-            </div>
-        </div>
-    </div>
-</div> -->
+	<div class="main-section">
+		<div class="profile-basic-info">
+			<a class="profile-basic-info-title-action" routerLink="/main/editprofile">
+				<div class="profile-basic-info-title-action-label">
+					<i class="fa-regular fa-pen-to-square"></i>
+					<label>Edit Profile</label>
+				</div>
+				<div>
+					<i class="fa-solid fa-arrow-right"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
