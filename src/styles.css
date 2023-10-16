@@ -246,3 +246,45 @@ select {
 .main-page .main-profile .profile-percentage p {
   font-size: 12px;
 }
+
+.main-section{
+  margin-bottom: 10px;
+}
+
+.main-section  img{
+  width: 100%;
+  height: auto;
+}
+
+.main-section .top-section{
+  padding: 10px;
+}
+
+.main-section .top-img,.bottom-img{
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.main-section .heading-card{
+  margin: 10px;
+  background-color: antiquewhite;
+}
+
+.main-section .heading-card .inner-card{
+  padding: 20px;
+}
+
+.main-section .personal-info{
+ display: flex;
+ justify-content: space-around;
+}
+
+.main-section .other-detail{
+  margin: 10px;
+  background-color: antiquewhite;
+}
+
+.main-section .philosophy-card, .planning-card{
+  margin: 10px;
+  background-color: antiquewhite;
+}
