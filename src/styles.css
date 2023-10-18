@@ -14,37 +14,164 @@ body {
 
 /* styles.scss */
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Courier New', monospace;
 }
+
+.empty{
+  height: 12vh;
+}
+
+input, select{
+  font-family: 'Courier New', monospace;
+  background-color: #f4f4f4;
+  padding: 0vh 2vh;
+}
+
+/* home */
+
+.home{
+  display: flex;
+  flex-direction: column;
+  
+  padding: 1vh;
+  gap:1vh;
+}
+
+.name {
+ 
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 2px solid #333; 
+  border-radius: 5px; 
+}
+.age{
+  
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 2px solid #333; 
+  border-radius: 5px; 
+}
+.name-age{
+  display : flex;
+  gap:1vh
+}
+.first-img{
+  display:flex;
+}
+.first-img img {
+  width: 100%;
+  max-width: 100%;
+  display: block; 
+  border: 2px solid #333; 
+  border-radius: 5px; 
+  margin: 10px 0;
+}
+.first-info{
+  display: flex;
+  gap:1vh;
+}
+
+.tag-icon-label {
+    gap:1vh;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 10px;
+}
+.tag-label{
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  }
+.tag-icon{
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  }
+
+
+
+/* home end */
+
+/* bottom nav */
 
 .bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: f3f3f3;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  height: 7vh;
+  height: 10vh;
   font-size: 20px;
-
+  border-top: 2px solid #333;
 }
 
 .nav-item {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 5vw;
 }
 
 .nav-item a {
   text-decoration: none;
+  color: #333;
 }
 
-.nav-item i {
-  color: black;
+.nav-item a i {
+  font-size: 24px;
+  color: #333;
 }
+
+.active {
+  color: #f4f4f4;
+}
+
+
+/* bottom nav end */
+
+/* prifile */
+
+.profile-img-name-complete{
+  display: flex;
+  flex-direction: row;
+  gap:1vh;
+  padding: 5vh 0vh;
+  justify-content: center;
+}
+
+.profile-page-profile-img{
+  width: 20vw;
+}
+.profile-page-profile-img img{
+  border-radius: 50%;
+}
+
+.profile-name-complete{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+/* profile end */
+
+
+/* form */
+
+.AboutForm{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* form end */
 
 .main {
   height: 100vh;
@@ -53,26 +180,6 @@ body {
   justify-content: center;
   align-items: center;
 
-}
-
-/* input {
-  width: 80vw;
-  height: 7vh;
-  border-radius: 2vh;
-  border: none;
-  outline: none;
-  padding: 0 10px;
-  font-size: 20px;
-} */
-
-select {
-  width: 100%;
-  height: 7vh;
-  border-radius: 2vh;
-  border: none;
-  outline: none;
-  padding: 0 10px;
-  font-size: 20px;
 }
 
 .signupform {
@@ -106,6 +213,7 @@ select {
   bottom: 10vh;
   display: flex;
   justify-content: center;
+  left: 0vh;
 }
 
 .signup-action button {
@@ -149,18 +257,20 @@ select {
 
 .profile-info-navbar-back {
   padding: 2vh 2.5vh;
-  background-color: greenyellow;
-  border-radius: 50%;
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 .profile-info-navbar-preview {
   padding: 2vh;
-  background-color: greenyellow;
-  border-radius: 5vh;
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 .profile-info-edit {
-  color: yellowgreen;
+  color: #333;
 }
 
 .profile-container {
@@ -179,7 +289,7 @@ select {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: mintcream;
+  background-color: #f4f4f4;
   border-radius: 1vh;
   padding: 2vh 2vh;
 
@@ -202,13 +312,10 @@ select {
   color: black;
 }
 
-.profile-img-info {
-  background-color: mintcream;
-  border-radius: 1vh;
-}
-
-.profile-img-src {
-  border-radius: 2vh;
+.profile-img img{
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  border-radius: 10px;
 }
 
 .profile-basic-info-title-action-label {
@@ -223,68 +330,73 @@ select {
   gap: 2vh;
 }
 
-.main-page .main-profile {
+
+
+
+
+/* about */
+
+.about-action {
+  width: 100vw;
+  position: fixed;
+  bottom: 12vh;
   display: flex;
-  gap: 20px;
-  padding: 4vh 2vw;
+  justify-content: center;
+  left: 0vh;
 }
 
-.main-page .main-profile .preview-img img {
-  width: 20vw;
-  padding: 2vw;
-  border-radius: 50%;
+.about-action button {
+
+  background-color: #f4f4f4;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 3vh 40vw;
+  cursor: pointer;
+}
+.about-first-last-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.about input{
+  width: 80vw;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.about select{
+  width: 80vw;
+  height: 7vh;
+  border-radius: 2vh;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.about-date-of-birth{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-gender{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-coomunity{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-page .main-profile .profile-preview {
-  padding: 3vw;
-}
-
-.main-page .main-profile input {
-  max-width: 100%;
-}
-
-.main-page .main-profile .profile-percentage p {
-  font-size: 12px;
-}
-
-.main-section{
-  margin-bottom: 10px;
-}
-
-.main-section  img{
-  width: 100%;
-  height: auto;
-}
-
-.main-section .top-section{
-  padding: 10px;
-}
-
-.main-section .top-img,.bottom-img{
-  padding: 10px;
-  border-radius: 25px;
-}
-
-.main-section .heading-card{
-  margin: 10px;
-  background-color: antiquewhite;
-}
-
-.main-section .heading-card .inner-card{
-  padding: 20px;
-}
-
-.main-section .personal-info{
- display: flex;
- justify-content: space-around;
-}
-
-.main-section .other-detail{
-  margin: 10px;
-  background-color: antiquewhite;
-}
-
-.main-section .philosophy-card, .planning-card{
-  margin: 10px;
-  background-color: antiquewhite;
-}
